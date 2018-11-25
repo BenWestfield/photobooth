@@ -3,6 +3,7 @@ import time
 import pygame 
 from pygame.locals import QUIT,KEYDOWN,K_ESCAPE,K_RETURN
 import config 
+import cups
 
 #########################
 ### Configuration #######
@@ -20,6 +21,25 @@ pygame.display.toggle_fullscreen
 
 real_path = os.path.dirname(os.path.realpath(__file__)) + "/media/"
 print(os.path.dirname(os.path.realpath(__file__))+"/media/")
+
+#initialise cups to allow printing
+conn = cups.Connection()
+printer = conn.getPrinters()
+printer_name = list(printer.keys()) [0]
+
+    images = if debug_mode then: debug_images() else: images
+
+        
+def print_image (image_location):
+
+def print_and_archive_image (image_name):
+    conn.printFile(printer_name,image_location,"Photobooth",{})
+    time.sleep(printing_time)
+    os.rename(to_be_printed_dir + image_name, archive_dir + image_name)
+
+
+
+
 
 def clear_screen():
     screen.fill ((0,0,0))
