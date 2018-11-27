@@ -38,9 +38,6 @@ def print_and_archive_image (image_name):
     os.rename(to_be_printed_dir + image_name, archive_dir + image_name)
 
 
-
-
-
 def clear_screen():
     screen.fill ((0,0,0))
     pygame.display.flip() 

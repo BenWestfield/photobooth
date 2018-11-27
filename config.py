@@ -8,3 +8,5 @@ restart_delay = 3 # how long between each photo
 prep_delay = 1.5  # how long after button is pushed before we start taking photos
 
 count_down = 6 # countdown before photo is taken
+
+printing_time = 20 # number of seconds the printer takes to print the photo:
